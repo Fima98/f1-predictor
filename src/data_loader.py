@@ -17,20 +17,8 @@ def load_race_data(filepath: str) -> np.ndarray:
         dtype=dtype,
         encoding='utf-8'
     )
-
-    #   WHAT IT DOES:
-    #   Loads numerical or structured data from a text/CSV file into a NumPy array.
-
-    # PARAMETERS:
-    #   - filepath (str / Path): Path to the target text or CSV file.
-    #   - delimiter (str): Character used to separate values in each row (e.g., ',').
-    #   - skip_header (int): Number of lines to skip at the beginning of the file (e.g., 1 for header row).
-    #   - dtype (dtype / list): Target data type for the returned array or per-column data structure.
-    #   - encoding (str): Text encoding used to read the file (e.g., 'utf-8').
-
-    # HOW IT WORKS:
-    #   It opens the file line by line, splits each line using the specified delimiter, ignores
-    #   the header row, converts each column to its designated data type, and packs the entire
-    #   dataset into a structured 1D NumPy array.
-
     return data
+
+
+if __name__ == '__main__':
+    print(load_race_data('data/race_results.csv'))
